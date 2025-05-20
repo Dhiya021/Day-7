@@ -1,0 +1,41 @@
+void findMajorityElement(int arr[], int n) {
+
+    for (int i = 0; i <= n / 2; i++) {
+
+
+
+        if (i + n / 2 < n && arr[i] == arr[i + n / 2]) {
+
+            printf("The majority element is : %d\n", arr[i]);
+
+            return;
+
+        }
+
+    }
+
+    printf("No majority element found in the array\n");
+
+}
+
+int main() {
+
+    int n;
+
+
+    scanf("%d", &n);
+
+    int arr[n];
+
+
+    for (int i = 0; i < n; i++) {
+
+        scanf("%d", &arr[i]);
+
+    }
+
+    findMajorityElement(arr, n);
+
+    return 0;
+
+}
